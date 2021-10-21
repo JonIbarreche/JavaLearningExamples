@@ -9,7 +9,7 @@ public class Main {
 		
 		/*
 		 * Clase PersonaSerializable
-		 */
+		 
 		PersonaSerializable p1 = new PersonaSerializable("Jon", "Ibaretxe", 21);
 		// Creamos un stream de salida de objetos a fichero
 		try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("datos.bin"))) {
@@ -18,7 +18,7 @@ public class Main {
 		} catch (IOException e) {
 		System.out.println("Error al serializar los datos al fichero");
 		}
-		
+		*/
 		/*
 		 * Leer instancia
 		 * 
@@ -31,6 +31,16 @@ public class Main {
 		System.out.println("Error. No se pudo encontrar la clase asociada. " + e.getMessage());
 		}
 		 */
+		
+		Compra c1 = new Compra("Patatas", "Un conjunto de patatas");
+		
+		// Creamos un stream de salida de objetos a fichero
+				try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("datos.bin"))) {
+				os.writeObject(c1);
+				System.out.println("Datos serializados correctamente");
+				} catch (IOException e) {
+				System.out.println("Error al serializar los datos al fichero");
+				}
 	}
 
 }
