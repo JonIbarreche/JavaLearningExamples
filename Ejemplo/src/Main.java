@@ -7,7 +7,11 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
-		
+		try {
+			Class.forName("org.sqlite.JDBC");
+			} catch (ClassNotFoundException e) {
+			System.out.println("No se ha podido cargar el driver de la base de datos");
+			}
 		
 		/*
 		 * Clase PersonaSerializable
