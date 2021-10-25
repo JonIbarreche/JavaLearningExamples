@@ -7,6 +7,8 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
+		
+		
 		/*
 		 * Clase PersonaSerializable
 		 
@@ -41,6 +43,9 @@ public class Main {
 				} catch (IOException e) {
 				System.out.println("Error al serializar los datos al fichero");
 				}
+				
+				
+				
 	}
 
 }
