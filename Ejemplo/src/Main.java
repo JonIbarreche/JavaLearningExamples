@@ -3,16 +3,34 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class Main {
+	
+	//Metodo Recursivo
+	private static void contar(int current, int end) {
+		
+		for (int i = current; i < end; i++) {
+			System.out.println(i);
+		}
+	
+	}
+	
+	private static void contarRecursiva(int current, int end) {
+		System.out.println(current);
+		if (current != end) {
+			contar(current + 1, end);
+		}
+	}
 
 	public static void main(String[] args) {
 		System.out.println("------------------");
+		/**
+		 * 
 		
 		try {
 			Class.forName("org.sqlite.JDBC");
 			} catch (ClassNotFoundException e) {
 			System.out.println("No se ha podido cargar el driver de la base de datos");
 			}
-		
+		 */
 		/*
 		 * Clase PersonaSerializable
 		 
@@ -37,7 +55,9 @@ public class Main {
 		System.out.println("Error. No se pudo encontrar la clase asociada. " + e.getMessage());
 		}
 		 */
-		
+		/**
+		 * 
+		 
 		Compra c1 = new Compra("Patatas", "Un conjunto de patatas");
 		
 		// Creamos un stream de salida de objetos a fichero
@@ -48,6 +68,10 @@ public class Main {
 				System.out.println("Error al serializar los datos al fichero");
 				}
 				
+		*/		
+		//Ejercicio recursividad
+		System.out.println("Contar Recursiva");
+		contarRecursiva(0, 14);
 				
 				
 	}
